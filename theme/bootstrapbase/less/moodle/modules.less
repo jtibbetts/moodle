@@ -1,0 +1,534 @@
+/* modules.less */
+
+// The home for small tweaks to modules that don't require
+// changes drastic enough to pull in the full module css
+// and replace it completely
+// Plus some misc. odds and ends
+
+select {
+    width: auto;
+}
+
+// Forum
+
+.path-mod-forum .forumsearch {
+    input,
+    .helptooltip {
+        margin: 0 3px;
+    }
+}
+
+.path-mod-forum .forumheaderlist,
+.path-mod-forum .forumheaderlist td {
+    border: none;
+}
+
+.path-mod-forum {
+    .forumheaderlist {
+        thead .header,
+        tbody .discussion td {
+            white-space: normal;
+            vertical-align: top;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+        }
+
+        thead .header {
+            white-space: normal;
+            vertical-align: top;
+        }
+
+        thead .header.replies {
+            text-align: center;
+        }
+        thead .header.lastpost {
+            text-align: right;
+        }
+        thead .header th,
+        tbody .discussion td{
+            &.discussionsubscription {
+                width: 16px;
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+        }
+        .discussion {
+            .author, .replies, .lastpost {
+                white-space: normal;
+            }
+            .discussionsubscription,
+            .replies {
+                text-align: center;
+            }
+            .topic,
+            .discussionsubscription,
+            .topic.starter,
+            .picture,
+            .author,
+            .replies,
+            .lastpost {
+                vertical-align: top;
+            }
+        }
+    }
+}
+
+.path-mod-feedback .feedback_bar_image {
+    height: 5px; // we should remove the bar height specification in core
+}
+
+.forumpost {
+    .well;
+    padding: 6px;
+    .header {
+        margin-bottom: 3px;
+    }
+    .picture img {
+        margin: 3px;
+        &.userpicture {
+            margin-left: 3px;
+            margin-right: 10px;
+        }
+    }
+    .content {
+        .posting.fullpost {
+            margin-top: 8px;
+        }
+    }
+    .row {
+        .topic,
+        .content-mask,
+        .options {
+            margin-left: 48px;
+        }
+        &.side {
+            clear: both;
+        }
+    }
+}
+
+.dir-rtl .forumpost {
+    .picture img {
+        &.userpicture {
+            margin-left: 10px;
+            margin-right: 3px;
+        }
+    }
+    .row {
+        .topic,
+        .content-mask,
+        .options {
+            margin-left: 0;
+            margin-right: 48px;
+        }
+    }
+}
+
+.forumpost .row .left {
+    width: 48px;
+}
+
+.forumpost .options .commands {
+    margin-left: 0;
+}
+
+.forumpost .subject {
+    font-weight: bold;
+}
+
+// Override hardcoded forum modules styling
+.forumsearch input[type=text] {
+     margin-bottom: 0 !important;
+}
+
+#page-mod-forum-discuss .discussioncontrols {
+    width: auto;
+    margin: 0;
+}
+
+#page-footer {
+    margin-top: 1em;
+    padding: 1em 0;
+    border-top: 2px solid @tableBorder;
+}
+
+.maincalendar .calendarmonth td,.maincalendar .calendarmonth th {
+    border: 1px dotted @tableBorder;
+}
+
+.path-grade-report-grader h1 {
+    text-align: inherit;
+}
+
+#page-mod-chat-gui_basic input#message {
+    max-width: 100%;
+}
+
+#page-mod-data-view #singleimage {
+    width: auto;
+}
+
+.path-mod-data form {
+    margin-top: 10px;
+}
+
+.template_heading {
+    margin-top: 10px;
+}
+
+.breadcrumb-button {
+    float: right;
+    margin-top: 4px;
+}
+
+.breadcrumb-button .singlebutton {
+    float: left;
+    margin-left: 4px;
+}
+
+.dir-rtl {
+    .nav-tabs > li,
+    .nav-pills > li {
+        float: right;
+    }
+}
+.dir-rtl .navbar .brand {
+    float: right;
+}
+
+.navbar-inverse .logininfo a {
+    color: @navbarInverseLinkColor;
+}
+.navbar-inverse .logininfo a:hover {
+    background-color: @navbarInverseLinkBackgroundHover; // "transparent" is default to differentiate :hover/:focus from .active
+    color: @navbarInverseLinkColorHover;
+}
+
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+    z-index: 4030;
+}
+
+.dir-rtl .breadcrumb-button,
+.dir-rtl .navbar .btn-navbar {
+    float: left;
+}
+
+.dir-rtl .breadcrumb-button .singlebutton {
+    float: right;
+    margin-right: 4px;
+}
+
+.ie .row-fluid .desktop-first-column {
+    margin-left: 0;
+}
+.langmenu form {
+    margin: 0;
+}
+.container-fluid {
+    max-width: 1680px;
+    margin: 0 auto;
+}
+// contributed by Paul Hibbitts, see http://msdn.microsoft.com/en-us/library/ie/jj583807(v=vs.85).aspx
+canvas {
+    -ms-touch-action: auto;
+}
+
+div#dock {
+    display: none;
+}
+
+.path-mod-choice {
+    .horizontal  .choices {
+        margin: 0;
+        .option {
+            display: inline-block;
+            padding: 10px;
+        }
+    }
+    .results .data {
+        white-space: normal;
+    }
+}
+
+.path-mod-lesson .firstpageoptions {
+    margin: auto;
+    min-width: 280px;
+    width: 60%;
+}
+
+.path-mod-lesson .centerpadded {
+    padding: 5px;
+    text-align: center;
+}
+
+.path-mod-wiki .wiki_headingtitle,
+.path-mod-wiki .midpad,
+.path-mod-wiki .wiki_headingtime {
+    text-align: inherit;
+}
+
+.path-mod-wiki .wiki_contentbox {
+    width: 100%;
+}
+
+// Dropdown styling.
+.dropdown-menu {
+    > li > a {
+        padding: 3px 20px 3px 8px;
+    }
+}
+.dir-rtl .dropdown-menu {
+    > li > a {
+        padding: 3px 8px 3px 20px;
+    }
+}
+.dir-rtl .dropdown-submenu > .dropdown-menu {
+  .border-radius(6px 0px 6px 6px);
+}
+
+
+// Survey module
+
+.path-mod-survey {
+    .surveytable {
+      > tbody > tr:nth-of-type(odd) {background-color: @tableBackground;}
+      > tbody > tr:nth-of-type(even) {background-color: @tableBackgroundAccent;}
+        .rblock label {text-align: center;}
+    }
+    .resultgraph, .reportsummary, .studentreport, .reportbuttons, .centerpara {
+        text-align:center;
+    }
+}
+// rtl overrides
+.dir-rtl {
+    &.path-mod-forum .forumheaderlist {
+        thead .header.lastpost {
+            text-align: left;
+        }
+        .discussion {
+            .lastpost {
+                text-align: left;
+            }
+        }
+    }
+}
+
+.nav .caret {
+    margin-left: 4px;
+}
+.dir-rtl .nav .caret {
+    margin-right: 4px;
+}
+
+// Dividers
+.nav {
+    .divider {
+        overflow: hidden;
+        width: 0;
+        height: 40px;
+        border-left: 1px solid #e5e5e5;
+        border-right: 1px solid #fff;
+    }
+}
+
+.dropdown-menu {
+    .divider {
+        width: auto;
+        height: 1px;
+        border-left: 0px none;
+        border-right: 0px none;
+    }
+}
+
+// Usermenu
+.usermenu {
+    font-size: 14px;
+    &.withoutlinks {
+        .withoutlinks {
+            display: none;
+        }
+    }
+    .login {
+        color: @navbarText;
+        line-height: 40px;
+        a {
+            color: @navbarLinkColor;
+        }
+    }
+    > .moodle-actionmenu > .menubar {
+        display: block;
+        margin: -40px 0px 2px 0px;
+        li {
+            display: block;
+            a {
+                line-height: 40px;
+            }
+        }
+    }
+    > div {
+        height: 40px;
+    }
+    .toggle-display {
+        color: @navbarLinkColor;
+        outline: none;
+    }
+    .userbutton {
+        height: 40px;
+        line-height: 40px;
+        .avatars{
+            display: inline-block;
+            height: 36px;
+            vertical-align: middle;
+            margin-right: 6px;
+
+            .avatar,
+            img {
+                display: block;
+            }
+        }
+        .usertext {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1em;
+            .meta,
+            .role {
+                display: block;
+                font-size: 12px;
+                .value {
+                    font-weight: bold;
+                }
+            }
+            .role {
+                font-weight: bold;
+            }
+        }
+    }
+    .moodle-actionmenu[data-enhanced].show .menu a {
+        white-space: nowrap;
+    }
+    .menu .filler {
+        width: auto;
+        height: 1px;
+        margin: 4px 0px;
+        display: block;
+        background: #e5e5e5;
+    }
+}
+.userloggedinas .usermenu .userbutton .avatars {
+    .avatar {
+        &.current {
+            position: relative;
+            top: 4px;
+            left: 4px;
+            width: 20px;
+            height: 20px;
+            margin-top: 11px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            box-shadow: -2px -2px 16px rgba(0,0,0,0.25);
+        }
+        img {
+            width: inherit;
+            height: inherit;
+        }
+        display: inline-block;
+        overflow: hidden;
+    }
+}
+.jsenabled .usermenu .moodle-actionmenu[data-enhanced] .toggle-display.textmenu {
+    position: relative;
+    .caret {
+        margin-top: 0;
+        vertical-align: middle;
+    }
+}
+.jsenabled .navbar-inverse {
+    .usermenu {
+        .login {
+            color: @navbarInverseText;
+            a {
+                color: @navbarInverseLinkColor;
+                &:hover {
+                    color: @navbarInverseLinkColorHover;
+                }
+            }
+        }
+        .toggle-display {
+            color: @navbarInverseLinkColor;
+        }
+        .userinfo .usertext {
+            color: @navbarInverseLinkColor;
+            .meta {
+                color: @navbarInverseText;
+                .value {
+                    color: @navbarInverseLinkColor;
+                }
+            }
+        }
+        &:hover {
+            .userinfo .usertext {
+                color: @navbarInverseLinkColorHover;
+                .meta {
+                    color: @navbarInverseText;
+                    .value {
+                        color: @navbarInverseLinkColorHover;
+                    }
+                }
+            }
+            .moodle-actionmenu[data-enhanced] .toggle-display.textmenu {
+                .caret {
+                    border-top-color: @navbarInverseLinkColorHover;
+                }
+            }
+        }
+    }
+}
+.dir-ltr {
+    .usermenu {
+        float: right;
+        .userinfo {
+            padding-left: 20px;
+        }
+        .userbutton {
+            margin-right: 4px;
+            padding-right: 8px;
+            .avatars{
+                margin-left: 6px;
+            }
+        }
+        > .moodle-actionmenu > .menubar li a {
+            text-align: right;
+        }
+    }
+    &.userloggedinas .usermenu .userbutton .avatars {
+        .avatar {
+            &.current {
+                margin-right: -34px;
+            }
+        }
+    }
+}
+
+.dir-rtl {
+    .usermenu {
+        float: left;
+        .userbutton {
+            margin-left: 4px;
+            padding-left: 8px;
+            .avatars{
+                margin-right: 6px;
+            }
+        }
+        > .moodle-actionmenu > .menubar li a {
+            text-align: left;
+        }
+    }
+    &.userloggedinas .usermenu .userbutton .avatars {
+        .avatar {
+            &.current {
+                margin-left: -42px;
+            }
+        }
+    }
+}
